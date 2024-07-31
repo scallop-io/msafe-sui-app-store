@@ -38,13 +38,13 @@ import { appHelpers } from '@/index';
 
 import { Account, Client, Obligation, vescaKey } from './scallop.config';
 
-describe('Scallop App', async () => {
+describe('Scallop App', () => {
   const scallop = new Scallop({
     client: Client,
     walletAddress: Account.address,
   });
-  await scallop.init();
   it('Test Supply Lending Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -71,6 +71,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Supply and Stake Lending Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -97,6 +98,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Withdraw and Unstake Lending Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -124,6 +126,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Withdraw Lending Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -150,6 +153,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Deposit Collateral Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -178,6 +182,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Withdraw Collateral Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -206,6 +211,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Borrow Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -233,6 +239,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Borrow With Boost Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -262,6 +269,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Repay Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -290,6 +298,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Stake Spool Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -316,6 +325,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Unstake Spool Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -341,6 +351,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Claim Supply Reward Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -388,6 +399,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Open Obligation Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -410,6 +422,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Stake SCA Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -439,6 +452,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Extend Period and Stake SCA Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
 
     expect(appHelper.application).toBe('scallop');
@@ -468,6 +482,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Renew Stake Lock Period and Amount SCA Transaction Build', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
     expect(appHelper.application).toBe('scallop');
 
@@ -494,6 +509,7 @@ describe('Scallop App', async () => {
   });
 
   it('Test Extend Stake Lock Period', async () => {
+    await scallop.init();
     const appHelper = appHelpers.getAppHelper('scallop');
     expect(appHelper.application).toBe('scallop');
 

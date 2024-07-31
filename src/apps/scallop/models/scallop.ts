@@ -47,7 +47,7 @@ export class Scallop {
         id: ADDRESSES_ID,
       });
     }
-    await this.address.read();
+    if(!this.address.getAddresses()) await this.address.read();
     this.client = new ScallopClient(this.params, this.address);
 
     const { builder, query, utils } = this.client;
